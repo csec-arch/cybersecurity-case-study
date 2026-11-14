@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon.in Cybersecurity Practices and Indian Legal Framework</title>
+    <style>
+        :root {
+  /* Primitive Color Tokens */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
+
+  --color-bg-1: rgba(59, 130, 246, 0.08);
+  --color-bg-2: rgba(245, 158, 11, 0.08);
+  --color-bg-3: rgba(34, 197, 94, 0.08);
+  --color-bg-4: rgba(239, 68, 68, 0.08);
+  --color-bg-5: rgba(147, 51, 234, 0.08);
+  --color-bg-6: rgba(249, 115, 22, 0.08);
+  --color-bg-7: rgba(236, 72, 153, 0.08);
+  --color-bg-8: rgba(6, 182, 212, 0.08);
+
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+
+    --color-bg-1: rgba(29, 78, 216, 0.15);
+    --color-bg-2: rgba(180, 83, 9, 0.15);
+    --color-bg-3: rgba(21, 128, 61, 0.15);
+    --color-bg-4: rgba(185, 28, 28, 0.15);
+    --color-bg-5: rgba(107, 33, 168, 0.15);
+    --color-bg-6: rgba(194, 65, 12, 0.15);
+    --color-bg-7: rgba(190, 24, 93, 0.15);
+    --color-bg-8: rgba(8, 145, 178, 0.15);
+
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-error: var(--color-red-400);
+    --color-success: var(--color-teal-300);
+    --color-warning: var(--color-orange-400);
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+    --color-btn-primary-text: var(--color-slate-900);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+  }
+}
+
+@font-face {
+  font-family: 'FKGroteskNeue';
+  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2')
+    format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-base);
+    background-color: var(--color-background);
+    color: var(--color-text);
+    overflow: hidden;
+}
+
+.presentation-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-32);
+    position: relative;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    max-height: 600px;
+    background-color: var(--color-surface);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: var(--space-32) 60px;
+    position: relative;
+    border: 1px solid var(--color-card-border);
+}
+
+.slide.active {
+    display: flex;
+    flex-direction: column;
+}
+
+.slide-number {
+    position: absolute;
+    top: var(--space-16);
+    right: var(--space-24);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-medium);
+}
+
+.slide-title {
+    font-size: var(--font-size-4xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+    margin-bottom: var(--space-24);
+    line-height: var(--line-height-tight);
+}
+
+.slide-subtitle {
+    font-size: var(--font-size-xl);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-16);
+    font-weight: var(--font-weight-medium);
+}
+
+.slide-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.title-slide .slide-content {
+    align-items: center;
+    text-align: center;
+}
+
+.title-slide .slide-title {
+    font-size: 36px;
+    margin-bottom: var(--space-16);
+}
+
+.title-slide .slide-subtitle {
+    font-size: var(--font-size-2xl);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: var(--space-12);
+    padding-left: var(--space-24);
+    position: relative;
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-normal);
+}
+
+li:before {
+    content: "•";
+    color: var(--color-primary);
+    font-weight: var(--font-weight-bold);
+    position: absolute;
+    left: 0;
+    font-size: var(--font-size-xl);
+}
+
+.nested-list {
+    margin-top: var(--space-8);
+    margin-left: var(--space-24);
+}
+
+.nested-list li {
+    font-size: var(--font-size-md);
+    margin-bottom: var(--space-8);
+}
+
+.nested-list li:before {
+    content: "◦";
+    font-size: var(--font-size-lg);
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-24);
+    gap: var(--space-16);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-12) var(--space-24);
+    border-radius: var(--radius-base);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: all var(--duration-normal) var(--ease-standard);
+    border: none;
+    background: var(--color-primary);
+    color: var(--color-btn-primary-text);
+}
+
+.btn:hover {
+    background: var(--color-primary-hover);
+}
+
+.btn:active {
+    background: var(--color-primary-active);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.slide-counter {
+    font-size: var(--font-size-base);
+    color: var(--color-text-secondary);
+    font-weight: var(--font-weight-medium);
+    min-width: 80px;
+    text-align: center;
+}
+
+.highlight {
+    color: var(--color-primary);
+    font-weight: var(--font-weight-semibold);
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    margin-top: var(--space-16);
+}
+
+.section-item {
+    background-color: var(--color-bg-1);
+    padding: var(--space-16);
+    border-radius: var(--radius-base);
+    border: 1px solid var(--color-card-border);
+}
+
+.section-item h3 {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--space-8);
+    color: var(--color-text);
+}
+
+.key-point {
+    background-color: var(--color-bg-2);
+    padding: var(--space-12) var(--space-16);
+    border-radius: var(--radius-base);
+    margin-bottom: var(--space-12);
+    border-left: 3px solid var(--color-primary);
+}
+
+.emphasis {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+}
+
+.conclusion-slide {
+    text-align: center;
+}
+
+.conclusion-slide .slide-title {
+    font-size: 48px;
+    color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .slide {
+        padding: var(--space-24) var(--space-32);
+        max-height: none;
+    }
+
+    .slide-title {
+        font-size: var(--font-size-3xl);
+    }
+
+    .title-slide .slide-title {
+        font-size: var(--font-size-4xl);
+    }
+
+    li {
+        font-size: var(--font-size-base);
+    }
+
+    .section-grid {
+        grid-template-columns: 1fr;
+    }
+}
+    
+.bib-list a {
+    color: var(--color-primary);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(var(--color-teal-500-rgb), 0.35);
+    transition: color var(--duration-fast) var(--ease-standard), border-color var(--duration-fast) var(--ease-standard);
+}
+
+.bib-list a:hover {
+    color: var(--color-primary-hover);
+    border-bottom-color: var(--color-primary-hover);
+}
+
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <div class="slide-wrapper">
+            <!-- Slide 1 - Title -->
+            <div class="slide active title-slide">
+                <div class="slide-number">1 / 30</div>
+                <div class="slide-content">
+                    <h1 class="slide-title">Amazon.in Cybersecurity Practices and Indian Legal Framework</h1>
+                    <p class="slide-subtitle">Case Studies, Compliance Analysis, and Strategic Implications</p>
+                    <p style="font-size: var(--font-size-lg); color: var(--color-primary); font-weight: var(--font-weight-semibold); margin-top: var(--space-8);">Archit Phogat &middot; 2025 Case Study</p>
+                </div>
+            </div>
+
+            <!-- Slide 2 - Overview -->
+            <div class="slide">
+                <div class="slide-number">2 / 30</div>
+                <h2 class="slide-title">Presentation Overview</h2>
+                <div class="slide-content">
+                    <div class="section-grid">
+                        <div class="section-item">
+                            <h3>Major Security Incidents &amp; Case Studies</h3>
+                        </div>
+                        <div class="section-item">
+                            <h3>Indian Legal Framework for Cybersecurity</h3>
+                        </div>
+                        <div class="section-item">
+                            <h3>Amazon's Security Infrastructure</h3>
+                        </div>
+                        <div class="section-item">
+                            <h3>Compliance Gaps &amp; Recommendations</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 - MOVEit Breach -->
+            <div class="slide">
+                <div class="slide-number">3 / 30</div>
+                <h2 class="slide-title">MOVEit Third-Party Breach (2023-2024)</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">Incident:</span> Third-party vendor MOVEit file transfer software compromised</li>
+                        <li><span class="emphasis">Scale:</span> 2.8 million employee records exposed</li>
+                        <li><span class="emphasis">Vulnerability:</span> SQL injection in MOVEit software exploited by Cl0p ransomware group</li>
+                        <li><span class="emphasis">Data Exposed:</span> Work contact information (names, emails, phone numbers, building locations)</li>
+                        <li><span class="emphasis">Amazon's Response:</span> Immediate vendor isolation, clarified AWS systems uncompromised</li>
+                        <li><span class="emphasis">Legal Implications:</span> Highlights vendor risk under DPDP Act</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 4 - Seller Breach -->
+            <div class="slide">
+                <div class="slide-number">4 / 30</div>
+                <h2 class="slide-title">Amazon India Seller Data Breach (January 2019)</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">Incident:</span> Technical glitch exposed financial data of sellers</li>
+                        <li><span class="emphasis">Data Exposed:</span> Sales volumes, inventory data, category splits, merchant tax reports</li>
+                        <li><span class="emphasis">Affected:</span> 400,000+ sellers on platform</li>
+                        <li><span class="emphasis">Resolution:</span> Fixed within hours, minimal disclosure</li>
+                        <li><span class="emphasis">Legal Framework at Time:</span> IT Act 2000 only - limited enforcement</li>
+                        <li><span class="emphasis">Significance:</span> Exposed competitive business intelligence of sellers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 5 - Customer Compromise -->
+            <div class="slide">
+                <div class="slide-number">5 / 30</div>
+                <h2 class="slide-title">Individual Customer Data Compromise (2024)</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">Incident:</span> Order duplication and counterfeit product delivery</li>
+                        <li><span class="emphasis">Suggests:</span> Order information leaked and exploited by malicious actors</li>
+                        <li><span class="emphasis">Concern:</span> Third-party seller access vulnerabilities</li>
+                        <li><span class="emphasis">Investigation:</span> Ongoing, no conclusive findings released</li>
+                        <li><span class="emphasis">Pattern:</span> Highlights persistent third-party ecosystem risks</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 6 - Legal Framework Overview -->
+            <div class="slide">
+                <div class="slide-number">6 / 30</div>
+                <h2 class="slide-title">India's Cybersecurity Legal Framework</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">Three Main Pillars:</span>
+                            <ul class="nested-list">
+                                <li>Information Technology Act, 2000</li>
+                                <li>Digital Personal Data Protection Act, 2023</li>
+                                <li>Sector-Specific Regulations (RBI, SEBI)</li>
+                            </ul>
+                        </li>
+                        <li><span class="emphasis">Supporting Framework:</span>
+                            <ul class="nested-list">
+                                <li>Consumer Protection (E-Commerce) Rules, 2020</li>
+                                <li>Intermediary Guidelines and Digital Media Ethics Code, 2021</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 7 - IT Act 2000 -->
+            <div class="slide">
+                <div class="slide-number">7 / 30</div>
+                <h2 class="slide-title">IT Act 2000: Foundation of Cyber Law</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">Section 43:</span> Civil remedies for unauthorized access to computer systems</li>
+                        <li><span class="emphasis">Section 66:</span> Hacking - 3 years imprisonment + ₹5 lakh fine</li>
+                        <li><span class="emphasis">Section 72:</span> Breach of confidentiality - 2 years + ₹1 lakh fine</li>
+                        <li><span class="emphasis">Section 72A:</span> Service provider breaches - 3 years + ₹5 lakh fine</li>
+                        <li><span class="emphasis">Focus:</span> Criminal and civil liability for cyber offenses</li>
+                        <li><span class="emphasis">Limitation:</span> Penalties insufficient for modern data breaches</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 8 - DPDP Act -->
+            <div class="slide">
+                <div class="slide-number">8 / 30</div>
+                <h2 class="slide-title">Digital Personal Data Protection Act, 2023</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">Enacted:</span> August 2023 - Game changer for data protection</li>
+                        <li><span class="emphasis">Introduces:</span> Comprehensive privacy framework comparable to GDPR</li>
+                        <li><span class="emphasis">Key Concepts:</span>
+                            <ul class="nested-list">
+                                <li>Data Fiduciaries (entities processing personal data)</li>
+                                <li>Mandatory breach notification within 72 hours</li>
+                                <li>Massive penalties up to ₹250 crore</li>
+                                <li>Data Protection Board of India (enforcement authority)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 9 - SDF Obligations -->
+            <div class="slide">
+                <div class="slide-number">9 / 30</div>
+                <h2 class="slide-title">Significant Data Fiduciary (SDF) Requirements</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">Amazon.in likely designated as SDF</span> based on:
+                            <ul class="nested-list">
+                                <li>Large volume of personal data processed</li>
+                                <li>Sensitive payment and financial information</li>
+                                <li>Millions of users across India</li>
+                            </ul>
+                        </li>
+                        <li><span class="emphasis">Enhanced Obligations:</span>
+                            <ul class="nested-list">
+                                <li>Appoint Data Protection Officer in India</li>
+                                <li>Annual Data Protection Impact Assessments (DPIA)</li>
+                                <li>Independent data audits</li>
+                                <li>Cross-border transfer restrictions</li>
+                                <li>3-year data retention limit for e-commerce</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 10 - Security Framework -->
+            <div class="slide">
+                <div class="slide-number">10 / 30</div>
+                <h2 class="slide-title">Amazon's Multi-Layered Security Infrastructure</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">Data Encryption:</span> AES-256 at rest, TLS 1.2+ in transit</li>
+                        <li><span class="emphasis">Two-Factor Authentication:</span> Mandatory for all seller accounts since March 2024</li>
+                        <li><span class="emphasis">Access Controls:</span> Least privilege principle implementation</li>
+                        <li><span class="emphasis">Threat Detection:</span> Amazon GuardDuty with ML-based anomaly detection</li>
+                        <li><span class="emphasis">Fraud Detection:</span> ML-based Amazon Fraud Detector</li>
+                        <li><span class="emphasis">Compliance:</span> PCI DSS certified for payment processing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 11 - Encryption -->
+            <div class="slide">
+                <div class="slide-number">11 / 30</div>
+                <h2 class="slide-title">Encryption Protocols</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">At Rest:</span> AES-256 encryption for all S3 buckets storing customer data</li>
+                        <li><span class="emphasis">In Transit:</span> TLS 1.2 or higher (HTTPS) for all data transmission</li>
+                        <li><span class="emphasis">Key Management:</span> AWS Key Management Service (KMS) for customer-managed keys</li>
+                        <li><span class="emphasis">Hardware-level:</span> XTS-AES-256 for EC2 instance stores</li>
+                        <li><span class="emphasis">Coverage:</span> All data states throughout entire lifecycle</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 12 - Access Control -->
+            <div class="slide">
+                <div class="slide-number">12 / 30</div>
+                <h2 class="slide-title">Access Control Mechanisms</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">Mandatory 2FA:</span> Required for all seller accounts since March 2024</li>
+                        <li><span class="emphasis">Unique Credentials:</span> No shared logins permitted across accounts</li>
+                        <li><span class="emphasis">Least Privilege:</span> Access limited strictly to required tasks only</li>
+                        <li><span class="emphasis">Automated Monitoring:</span> Failed login detection, suspicious activity alerts</li>
+                        <li><span class="emphasis">Immediate Revocation:</span> Access terminated upon employee departure</li>
+                        <li><span class="emphasis">Audit Logs:</span> Comprehensive logging of all access events</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 13 - Threat Detection -->
+            <div class="slide">
+                <div class="slide-number">13 / 30</div>
+                <h2 class="slide-title">Amazon GuardDuty: AI-Powered Threat Detection</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">Service Type:</span> Fully managed threat detection service</li>
+                        <li><span class="emphasis">Scale:</span> Monitors billions of events across AWS infrastructure</li>
+                        <li><span class="emphasis">Technology:</span> Machine learning-based anomaly detection</li>
+                        <li><span class="emphasis">Intelligence:</span> Integrates global threat intelligence feeds</li>
+                        <li><span class="emphasis">Response:</span> Automated response workflows for identified threats</li>
+                        <li><span class="emphasis">Performance:</span> Detection time reduced from hours to &lt;1 minute</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 14 - Vendor Security -->
+            <div class="slide">
+                <div class="slide-number">14 / 30</div>
+                <h2 class="slide-title">Third-Party Vendor Security Requirements</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">Comprehensive vendor policy requirements:</span>
+                            <ul class="nested-list">
+                                <li>Annual penetration testing mandatory</li>
+                                <li>Security certifications (ISO 27001, SOC 2)</li>
+                                <li>Firewall configurations with annual reviews</li>
+                                <li>Documented incident response procedures</li>
+                            </ul>
+                        </li>
+                        <li><span class="emphasis">Amazon Audit Rights:</span> Reserved in all vendor contracts</li>
+                        <li><span class="emphasis">Contractual Accountability:</span> Breach liability clauses</li>
+                        <li><span class="emphasis">Gap Revealed:</span> MOVEit breach exposed vendor oversight deficiencies</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 15 - 2019 Legal Exposure -->
+            <div class="slide">
+                <div class="slide-number">15 / 30</div>
+                <h2 class="slide-title">2019 Seller Breach: Then vs. Now</h2>
+                <div class="slide-content">
+                    <div class="key-point">
+                        <strong>Under 2019 Legal Framework:</strong>
+                        <ul class="nested-list">
+                            <li>Limited IT Act penalties (max ₹5 lakh)</li>
+                            <li>Section 72 difficult to apply (technical glitch vs. willful disclosure)</li>
+                            <li>Minimal regulatory exposure and enforcement</li>
+                        </ul>
+                    </div>
+                    <div class="key-point">
+                        <strong>Under Current DPDP Act:</strong>
+                        <ul class="nested-list">
+                            <li>₹250 crore: Failure to implement adequate security safeguards</li>
+                            <li>₹200 crore: Failure to notify within 72 hours</li>
+                            <li><span class="emphasis">Total exposure: ₹450 crore+ for identical incident</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 16 - MOVEit Legal -->
+            <div class="slide">
+                <div class="slide-number">16 / 30</div>
+                <h2 class="slide-title">MOVEit Breach Under DPDP Framework</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">Mandatory breach notification to:</span>
+                            <ul class="nested-list">
+                                <li>Data Protection Board of India within 72 hours</li>
+                                <li>All affected individuals without undue delay</li>
+                            </ul>
+                        </li>
+                        <li><span class="emphasis">Vendor Due Diligence Failure:</span>
+                            <ul class="nested-list">
+                                <li>SDF must ensure vendor security measures adequate</li>
+                                <li>Failure to monitor vendor patching = regulatory penalty</li>
+                            </ul>
+                        </li>
+                        <li><span class="emphasis">No Safe Harbor:</span> Liability exists regardless of third-party origin</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 17 - Data Localization -->
+            <div class="slide">
+                <div class="slide-number">17 / 30</div>
+                <h2 class="slide-title">Data Residency &amp; Localization</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">RBI Mandate (2018):</span> Payment data stored exclusively in India</li>
+                        <li><span class="emphasis">SEBI Mandate (2023):</span> Cloud data storage within India for regulated entities</li>
+                        <li><span class="emphasis">DPDP Act:</span> SDFs cannot transfer certain data categories abroad without consent</li>
+                        <li><span class="emphasis">Impact on Amazon:</span>
+                            <ul class="nested-list">
+                                <li>Requires dedicated Indian data center infrastructure</li>
+                                <li>Conflicts with global AWS operational model</li>
+                                <li>Substantial capital investment needed</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 18 - Compliance Gaps -->
+            <div class="slide">
+                <div class="slide-number">18 / 30</div>
+                <h2 class="slide-title">Amazon.in: Critical Compliance Gaps</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">No Data Protection Officer</span> appointed in India</li>
+                        <li><span class="emphasis">Data Retention:</span> Practices exceed 3-year e-commerce limit</li>
+                        <li><span class="emphasis">Global Infrastructure:</span> Conflicts with localization requirements</li>
+                        <li><span class="emphasis">Vendor Security Oversight:</span> Insufficient as demonstrated by MOVEit breach</li>
+                        <li><span class="emphasis">Breach Notification:</span> Procedures inadequate for 72-hour timeline</li>
+                        <li><span class="emphasis">Annual DPIA and Audits:</span> Not yet implemented for SDF compliance</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 19 - Penalty Exposure -->
+            <div class="slide">
+                <div class="slide-number">19 / 30</div>
+                <h2 class="slide-title">Hypothetical Breach: Total Legal Exposure</h2>
+                <div class="slide-content">
+                    <div class="key-point">
+                        <strong>Scenario:</strong> 10 million customers' financial data breach
+                    </div>
+                    <ul>
+                        <li><span class="emphasis">DPDP Act Penalties:</span> ₹450 crore (security + notification failure)</li>
+                        <li><span class="emphasis">IT Act:</span> Criminal prosecution under Sections 66, 72A</li>
+                        <li><span class="emphasis">Consumer Protection:</span> Fall-back liability + individual compensation</li>
+                        <li><span class="emphasis">RBI Enforcement:</span> Payment data violation penalties</li>
+                        <li><span class="emphasis">Total Estimated Exposure:</span> <span class="highlight">₹1,000+ crore</span></li>
+                        <li><span class="emphasis">Plus:</span> Operational restrictions during investigation period</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 20 - Consumer Protection -->
+            <div class="slide">
+                <div class="slide-number">20 / 30</div>
+                <h2 class="slide-title">E-Commerce Rules &amp; Platform Accountability</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">Framework:</span> Consumer Protection (E-Commerce) Rules, 2020</li>
+                        <li><span class="emphasis">Grievance Redressal:</span> 48-hour acknowledgment, 1-month resolution requirement</li>
+                        <li><span class="emphasis">Fall-back Liability:</span> Platforms directly responsible for seller actions</li>
+                        <li><span class="emphasis">National Consumer Commission:</span> Precedent - Amazon cannot disclaim responsibility</li>
+                        <li><span class="emphasis">Extension:</span> Liability extends to cybersecurity failures enabling fraud</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 21 - Grievance -->
+            <div class="slide">
+                <div class="slide-number">21 / 30</div>
+                <h2 class="slide-title">Multi-Channel Complaint System</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">National Cyber Crime Reporting Portal (NCCRP):</span> For data breaches and cyber fraud</li>
+                        <li><span class="emphasis">Consumer Disputes Redressal Commissions:</span> Platform accountability claims</li>
+                        <li><span class="emphasis">Future Data Protection Board:</span> DPDP Act violation enforcement</li>
+                        <li><span class="emphasis">Intermediary Grievance Officers:</span> 24-hour acknowledgment requirement</li>
+                        <li><span class="emphasis">Result:</span> Multiple accountability pathways for affected customers</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 22 - Implementation Timeline -->
+            <div class="slide">
+                <div class="slide-number">22 / 30</div>
+                <h2 class="slide-title">DPDP Act Implementation Status</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">August 2023:</span> DPDP Act enacted by Parliament</li>
+                        <li><span class="emphasis">January 2025:</span> Draft DPDP Rules released for consultation</li>
+                        <li><span class="emphasis">2025:</span> Enforcement-heavy phase expected to begin</li>
+                        <li><span class="emphasis">Gap:</span> Data Protection Board of India not yet established</li>
+                        <li><span class="emphasis">Uncertainty:</span> Final rules still under consultation process</li>
+                        <li><span class="emphasis">Industry Reaction:</span> Amazon, Google, Meta requesting implementation delays</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 23 - Recommendations -->
+            <div class="slide">
+                <div class="slide-number">23 / 30</div>
+                <h2 class="slide-title">Compliance Roadmap: Urgent Actions Required</h2>
+                <div class="slide-content">
+                    <div class="key-point">
+                        <strong>Immediate Actions:</strong>
+                        <ul class="nested-list">
+                            <li>Appoint Data Protection Officer in India</li>
+                            <li>Establish 72-hour breach notification procedures</li>
+                            <li>Conduct comprehensive data audit and inventory</li>
+                        </ul>
+                    </div>
+                    <div class="key-point">
+                        <strong>Medium-term (6-12 months):</strong>
+                        <ul class="nested-list">
+                            <li>Build dedicated Indian data residency infrastructure</li>
+                            <li>Implement 3-year data retention policies</li>
+                            <li>Enhance vendor security auditing framework</li>
+                        </ul>
+                    </div>
+                    <div class="key-point">
+                        <strong>Long-term:</strong>
+                        <ul class="nested-list">
+                            <li>Annual DPIAs and independent security audits</li>
+                            <li>Cross-border transfer controls and consent mechanisms</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 24 - Regulatory Implications -->
+            <div class="slide">
+                <div class="slide-number">24 / 30</div>
+                <h2 class="slide-title">India's Data Protection Trajectory</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li><span class="emphasis">Trend:</span> Comprehensive framework comparable to EU's GDPR</li>
+                        <li><span class="emphasis">Focus:</span> Data sovereignty and mandatory localization</li>
+                        <li><span class="emphasis">Enforcement Phase:</span> Transitioning from enactment to active enforcement</li>
+                        <li><span class="emphasis">Message:</span> Multinational platforms must restructure data practices</li>
+                        <li><span class="emphasis">Reality:</span> Regulatory inevitability overrides operational preferences</li>
+                        <li><span class="emphasis">Adaptation Required:</span> Compliance is no longer optional</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 25 - Key Takeaways -->
+            <div class="slide">
+                <div class="slide-number">25 / 30</div>
+                <h2 class="slide-title">Key Takeaways</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li>Amazon operates in <span class="emphasis">increasingly rigorous legal framework</span></li>
+                        <li>Past breaches would trigger <span class="emphasis">massive penalties</span> under current law</li>
+                        <li><span class="emphasis">Significant compliance gaps</span> require urgent remediation</li>
+                        <li>Defense in depth, zero trust, proactive detection <span class="emphasis">essential</span></li>
+                        <li><span class="emphasis">Third-party risk management</span> critical - MOVEit lessons</li>
+                        <li>Transparency and <span class="emphasis">rapid incident response</span> mandatory</li>
+                        <li>Legal exposure exceeds <span class="emphasis">₹1,000 crore</span> for major breach</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 26 - Conclusion -->
+            <div class="slide">
+                <div class="slide-number">26 / 30</div>
+                <h2 class="slide-title">Conclusion: Regulatory Transformation Underway</h2>
+                <div class="slide-content">
+                    <ul>
+                        <li>India constructing <span class="emphasis">comprehensive data protection infrastructure</span></li>
+                        <li>DPDP Act represents <span class="emphasis">watershed moment</span> in privacy regulation</li>
+                        <li>Amazon.in faces <span class="emphasis">substantial legal exposure</span> without full compliance</li>
+                        <li><span class="emphasis">Proactive investment</span> in compliance required now</li>
+                        <li>Enforcement will intensify as Data Protection Board activates</li>
+                        <li><span class="highlight">Message: Adapt to regulatory transformation or face severe consequences</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 27 - Bibliography Part 1 -->
+            <div class="slide">
+                <div class="slide-number">27 / 30</div>
+                <h2 class="slide-title">Bibliography &amp; References</h2>
+                <div class="slide-content">
+                    <h3 style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); margin-bottom: var(--space-12); color: var(--color-primary);">Section 1: Indian Legal Framework Sources</h3>
+                    <ul class="bib-list" style="font-size: var(--font-size-sm); line-height: 1.6;">
+                        <li><a href="https://cleartax.in/s/it-act-2000" target="_blank" rel="noopener noreferrer">ClearTax.in. &ldquo;IT Act 2000: Objectives, Features, Amendments, Sections.&rdquo;</a> August 6, 2025.</li>
+                        <li><a href="https://www.dlapiperdataprotection.com/?t=law&amp;c=IN" target="_blank" rel="noopener noreferrer">DLA Piper Data Protection. &ldquo;Data Protection Laws in India.&rdquo;</a> April 29, 2024.</li>
+                        <li><a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/information-technology-it-act-2000" target="_blank" rel="noopener noreferrer">Drishti IAS. &ldquo;Information Technology (IT) Act, 2000.&rdquo;</a> October 14, 2025.</li>
+                        <li><a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/dpdp-act-2023-and-dpdp-rules-2025" target="_blank" rel="noopener noreferrer">Drishti IAS. &ldquo;DPDP Act, 2023 and DPDP Rules, 2025.&rdquo;</a> June 5, 2025.</li>
+                        <li><a href="https://www.geeksforgeeks.org/cybersecurity/information-technology-act-2000-india/" target="_blank" rel="noopener noreferrer">GeeksforGeeks. &ldquo;Information Technology Act, 2000 (IT Act).&rdquo;</a> Updated March 26, 2026.</li>
+                        <li><a href="https://blog.ipleaders.in/information-technology-act-2000/" target="_blank" rel="noopener noreferrer">iPleaders. &ldquo;Information Technology Act, 2000.&rdquo;</a> August 24, 2022.</li>
+                        <li><a href="https://en.wikipedia.org/wiki/Digital_Personal_Data_Protection_Act,_2023" target="_blank" rel="noopener noreferrer">Wikipedia. &ldquo;Digital Personal Data Protection Act, 2023.&rdquo;</a> Enacted August 11, 2023.</li>
+                        <li><a href="https://qseap.com/services/rbi-data-localization/" target="_blank" rel="noopener noreferrer">Qseap Infotech. &ldquo;RBI Data Localization.&rdquo;</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 28 - Bibliography Part 2 -->
+            <div class="slide">
+                <div class="slide-number">28 / 30</div>
+                <h2 class="slide-title">Bibliography &amp; References (Continued)</h2>
+                <div class="slide-content">
+                    <h3 style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); margin-bottom: var(--space-12); color: var(--color-primary);">Section 2: Amazon Security Incidents</h3>
+                    <ul class="bib-list" style="font-size: var(--font-size-sm); line-height: 1.6;">
+                        <li><a href="https://thecyberexpress.com/amazon-customer-data-breach-india/" target="_blank" rel="noopener noreferrer">The Cyber Express. &ldquo;Amazon Customer in India Alleges Data Breach After Fake Orders.&rdquo;</a> August 11, 2024.</li>
+                        <li><a href="https://www.cshub.com/attacks/articles/incident-of-the-week-amazon-india-accidentally-exposes-seller-information-to-other-sellers" target="_blank" rel="noopener noreferrer">Cyber Security Hub. &ldquo;Incident Of The Week: Amazon India Accidentally Exposes Seller Information To Other Sellers.&rdquo;</a> January 11, 2019.</li>
+                        <li><a href="https://m.economictimes.com/small-biz/startups/newsbuzz/amazon-breach-may-have-hit-indian-users/articleshow/66759564.cms" target="_blank" rel="noopener noreferrer">The Economic Times. &ldquo;Amazon breach may have hit Indian users.&rdquo;</a> November 23, 2018.</li>
+                        <li><a href="https://timesofindia.indiatimes.com/technology/tech-news/amazon-confirms-employee-data-hacked-in-the-biggest-cyberattack-of-2023-heres-what-got-leaked/articleshow/115192677.cms" target="_blank" rel="noopener noreferrer">Times of India. &ldquo;Amazon confirms employee data hacked in &lsquo;the biggest cyberattack of 2023&rsquo;, here&rsquo;s what got leaked.&rdquo;</a> November 12, 2024.</li>
+                        <li><a href="https://timesofindia.indiatimes.com/city/hyderabad/amazons-complaint-leads-to-fir-against-22-ex-employees-in-rs-102-crore-us-truck-data-fraud/articleshow/117666722.cms" target="_blank" rel="noopener noreferrer">Times of India. &ldquo;Amazon&rsquo;s complaint leads to FIR against 22 ex-employees in Rs 102-crore US truck data fraud.&rdquo;</a> January 29, 2025.</li>
+                        <li><a href="https://www.business-standard.com/article/companies/another-data-breach-amazon-india-leaks-sellers-information-in-tech-error-119011000001_1.html" target="_blank" rel="noopener noreferrer">Business Standard. &ldquo;Another data breach? Amazon India leaks sellers&rsquo; information in tech error.&rdquo;</a> January 10, 2019.</li>
+                        <li><a href="https://sites.psu.edu/digitalshred/2022/01/26/amazons-dark-secret-it-has-failed-to-protect-your-data-wired/" target="_blank" rel="noopener noreferrer">WIRED (via PSU Digital Shred archive). &ldquo;Amazon&rsquo;s Dark Secret: It Has Failed to Protect Your Data.&rdquo;</a> November 18, 2021.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 29 - Bibliography Part 3 -->
+            <div class="slide">
+                <div class="slide-number">29 / 30</div>
+                <h2 class="slide-title">Bibliography &amp; References (Continued)</h2>
+                <div class="slide-content">
+                    <h3 style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); margin-bottom: var(--space-12); color: var(--color-primary);">Section 3: Technical &amp; Compliance Frameworks</h3>
+                    <ul class="bib-list" style="font-size: var(--font-size-sm); line-height: 1.6;">
+                        <li><a href="https://www.cloudthat.com/resources/blog/detecting-fraud-in-e-commerce-using-aws-machine-learning-services" target="_blank" rel="noopener noreferrer">CloudThat. &ldquo;Detecting Fraud in E-commerce using AWS Machine Learning Services.&rdquo;</a> February 28, 2023.</li>
+                        <li><a href="https://www.ijcaonline.org/archives/volume187/number11/transaction-fraud-detection-using-amazon-fraud-detector-and-aws-cloud-services/" target="_blank" rel="noopener noreferrer">IJCA Online. &ldquo;Transaction Fraud Detection using Amazon Fraud Detector and AWS Cloud Services.&rdquo;</a> June 16, 2025.</li>
+                        <li><a href="https://docs.aws.amazon.com/frauddetector/latest/ug/what-is-frauddetector.html" target="_blank" rel="noopener noreferrer">AWS Documentation. &ldquo;What is Amazon Fraud Detector?&rdquo;</a></li>
+                        <li><a href="https://orx.org/resource/moveit-transfer-data-breaches-orx-news-deep-dive" target="_blank" rel="noopener noreferrer">ORX. &ldquo;MOVEit transfer data breaches Deep Dive.&rdquo;</a> January 2024.</li>
+                        <li><a href="https://en.wikipedia.org/wiki/2023_MOVEit_data_breach" target="_blank" rel="noopener noreferrer">Wikipedia. &ldquo;2023 MOVEit data breach.&rdquo;</a></li>
+                        <li><a href="https://www.cybersecuritydive.com/news/progress-software-moveit-meltdown/703659/" target="_blank" rel="noopener noreferrer">Cybersecurity Dive. &ldquo;Progress Software&rsquo;s MOVEit meltdown: Uncovering the fallout.&rdquo;</a> January 16, 2024.</li>
+                        <li><a href="https://accuknox.com/blog/ai-attacks-on-the-rise" target="_blank" rel="noopener noreferrer">AccuKnox. &ldquo;AI Attacks On The Rise &ndash; Amazon Fights 1 Billion+ Threats A Day.&rdquo;</a> June 24, 2025.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slide 30 - Bibliography Part 4 -->
+            <div class="slide">
+                <div class="slide-number">30 / 30</div>
+                <h2 class="slide-title">Bibliography &amp; References (Continued)</h2>
+                <div class="slide-content">
+                    <h3 style="font-size: var(--font-size-lg); font-weight: var(--font-weight-bold); margin-bottom: var(--space-12); color: var(--color-primary);">Section 4: E-Commerce &amp; Consumer Protection Laws</h3>
+                    <ul class="bib-list" style="font-size: var(--font-size-sm); line-height: 1.6;">
+                        <li><a href="https://www.pslchambers.com/psl-release/an-overview-of-the-consumer-protection-e-commerce-rules-2020/" target="_blank" rel="noopener noreferrer">PSL Chambers. &ldquo;An Overview of the Consumer Protection (E-Commerce) Rules, 2020.&rdquo;</a> June 3, 2021.</li>
+                        <li><a href="https://consumeraffairs.gov.in/pages/consumer-protection-acts" target="_blank" rel="noopener noreferrer">Department of Consumer Affairs, Government of India. &ldquo;Consumer Protection (E-Commerce) Rules, 2020.&rdquo;</a> July 23, 2020.</li>
+                        <li><a href="https://thc.nic.in/Central%20Governmental%20Rules/Consumer%20Protection%20(E-Commerce)%20Rules,%202020.pdf" target="_blank" rel="noopener noreferrer">THC NIC. &ldquo;Consumer Protection (E-Commerce) Rules, 2020.&rdquo;</a> Official Government Notice.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn" id="prevBtn" onclick="changeSlide(-1)">← Previous</button>
+            <span class="slide-counter" id="slideCounter">1 / 30</span>
+            <button class="btn" id="nextBtn" onclick="changeSlide(1)">Next →</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const slideCounter = document.getElementById('slideCounter');
+
+        function showSlide(n) {
+            // Wrap around
+            if (n >= totalSlides) {
+                currentSlide = 0;
+            } else if (n < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = n;
+            }
+
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+
+            // Show current slide
+            slides[currentSlide].classList.add('active');
+
+            // Update counter
+            slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+
+            // Update button states
+            prevBtn.disabled = false;
+            nextBtn.disabled = false;
+        }
+
+        function changeSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                changeSlide(1);
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                changeSlide(-1);
+            }
+        });
+
+        // Initialize
+        showSlide(0);
+    </script>
+</body>
+</html>
